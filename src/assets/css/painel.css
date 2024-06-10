@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body {
+    background-image: url(../img/biblioteca.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    width: 2443px;
+    left: 0;
+    top: 0;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar a {
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.library {
+    width: 2100px;
+    height: 800px;
+    background-color: rgba(111, 30, 81, 0.9);
+    border-radius: 20px;
+}
+
+.library h1 {
+    font-size: 32px;
+    color: white;
+}
+
+.top {
+    padding: 50px 50px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-btn {
+    font-size: 32px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #6F1E51;
+    border-radius: 10px;
+    border: none;
+}
+
+.add-btn:hover {
+    background-color: #6F1E51;
+    color: white;
+}
+
+.book-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.books {
+    width: 2100px;
+    height: 640px;
+    background-color: #833471;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,64 @@
+body {
+    background-image: url(../img/biblioteca.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.conteiner {
+    width: 430px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+form {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.field {
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: none;
+}
+
+.field:focus {
+    outline: #B53471 solid 5px;
+    border: none;
+}
+
+.custom-btn {
+    font-size: 1.6rem;
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+}
+
+.custom-btn:hover  {
+    background-color: rgb(111, 30, 81);
+    color: white;
+    cursor: pointer;
+}
+
+a {
+    font-size: 22px;
+    color: rgb(220, 220, 220);
+}
