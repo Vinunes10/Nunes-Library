@@ -9,7 +9,7 @@ if (isset($_POST["logar"])) {
 
     $pdo = Conexao::Conectar("conf.ini");
 
-    $sql = "SELECT * FROM usuarios WHERE Email=:email and Senha=:senha";
+    $sql = "SELECT * FROM usuarios WHERE email=:email and senha=:senha";
 
     $stmt = $pdo->prepare($sql);
 
@@ -28,15 +28,15 @@ if (isset($_POST["logar"])) {
             session_start();
         }
 
-        $_SESSION["id"] = $usuario[0]["ID"];
-        $_SESSION["nome"] = $usuario[0]["Nome"];
+        $_SESSION["id"] = $usuario[0]["id"];
+        $_SESSION["nome"] = $usuario[0]["nome"];
 
         // var_dump($_SESSION);
 
         header("Location: painel.php");
 
     } else {
-        echo "ERRO";
+        echo "<script>alert('Falha no Login, tente novamente.')</script>";
     }
 
 }
