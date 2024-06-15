@@ -1,16 +1,22 @@
 body {
     background-image: url(../img/biblioteca.jpg);
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-size: cover;
 }
 
 .conteiner {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
     width: 430px;
     height: 600px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(207, 106, 135, 0.9);
     color: white;
     display: flex;
     flex-direction: column;
@@ -58,7 +64,7 @@ form {
     cursor: pointer;
 }
 
-a {
+.conteiner .box a {
     font-size: 22px;
     color: rgb(220, 220, 220);
 }

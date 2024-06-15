@@ -13,7 +13,7 @@ body {
 
 .conteiner {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 header {
@@ -49,6 +49,7 @@ main {
     height: 75vh;
     width: 22vw;
     background-color: rgba(207, 106, 135, 0.9);
+    border-radius: 10px;
     position: absolute;
     bottom: 10%;
     display: flex;
@@ -57,10 +58,47 @@ main {
     align-items: center;
 }
 
+main h1 {
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+}
+
 form {
-    width: 60vh;
+    height: 60vh;
     width: 22vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.field {
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: none;
+}
+
+.field:focus {
+    outline: #c44569 solid 5px;
+    border: none;
+}
+
+.custom-btn {
+    background-color: white;
+    color: #c44569;
+    font-size: 1.6rem;
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+}
+
+.custom-btn:hover  {
+    color: white;
+    background-color: #d66786;
+    cursor: pointer;
+    border: white solid 1px;
 }

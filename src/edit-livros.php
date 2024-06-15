@@ -2,7 +2,7 @@
 
 include_once "contents/protect.php";
 
-include_once "contents/adicionar-livros.php";
+include_once "contents/edit.php";
 
 ?>
 
@@ -33,15 +33,15 @@ include_once "contents/adicionar-livros.php";
         </header>
         <main>
             <div class="add-books">
-            <h1>Adicionar Livro</h1>
+            <h1>Editar Livro</h1>
                 <form action="" method="post">
-                    <input type="text" class="field" name="autor" placeholder="Autor" required>
-                    <input type="text" class="field" name="titulo" placeholder="Título" required>
-                    <input type="text" class="field" name="subtitulo" placeholder="Subtítulo" required>
-                    <input type="text" class="field" name="edicao" placeholder="Edição" required>
-                    <input type="text" class="field" name="editora" placeholder="Editora" required>
-                    <input type="date" class="field" name="ano-de-publicacao" placeholder="Ano de Publicação" required>
-                    <input type="submit" class="custom-btn" name="adicionar" value="Adicionar">
+                    <input type="text" class="field" name="autor" placeholder="Autor" value="<?= $autor ?>">
+                    <input type="text" class="field" name="titulo" placeholder="Título" value="<?= $titulo ?>">
+                    <input type="text" class="field" name="subtitulo" placeholder="Subtítulo" value="<?= $subtitulo ?>">
+                    <input type="text" class="field" name="edicao" placeholder="Edição" value="<?= $edicao ?>">
+                    <input type="text" class="field" name="editora" placeholder="Editora" value="<?= $editora ?>">
+                    <input type="date" class="field" name="ano-de-publicacao" placeholder="Ano de Publicação" value="<?= $public ?>">
+                    <input type="submit" class="custom-btn" name="editar" value="Editar">
                 </form>
             </div>
         </main>

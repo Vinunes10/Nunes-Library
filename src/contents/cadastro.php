@@ -5,12 +5,12 @@ try {
 
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $senha = $_POST["senha"];
+        $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
         $senha_c = $_POST["conf-senha"];
 
-        if ($senha == $senha_c) {
+        if (password_verify($senha_c, $senha)) {
 
-            require "Conexao.php";
+            require_once "Conexao.php";
 
             $pdo = Conexao::Conectar("conf.ini");
         
