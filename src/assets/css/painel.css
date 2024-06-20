@@ -1,19 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
     background-image: url(../img/biblioteca.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .conteiner {
+    background:linear-gradient(360deg, rgba(248, 165, 194, 0.9), rgba(99, 205, 218, 0.9));
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
 }
 
 header {
@@ -22,7 +19,7 @@ header {
     left: 0;
     top: 0;
     padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +27,7 @@ header {
 }
 
 .navbar a {
+    position: relative;
     font-size: 26px;
     color: white;
     font-weight: 600;
@@ -37,54 +35,51 @@ header {
     margin-left: 50px;
 }
 
-main {
-    width: 100vw;
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar a svg {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1)
 }
 
 .library {
-    width: 80vw;
-    height: 80vh;
-    position: absolute;
-    bottom: 5%;
-    background-color: rgba(207, 106, 135, 0.9);
-    border-radius: 10px;
-}
-
-.top {
-    width: 100%;
-    height: 100px;
-    background-color: #c44569;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 400px;
+    height: 600px;
+    background-color: #c0427d;
     border-radius: 10px;
-}
-
-.top h2 {
-    margin-top: 10px;
+    box-shadow: 3px 3px 4px 2px rgb(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
     color: white;
-    font-size: 32px;
-    font-weight: 600;
 }
 
-.add-btn {
-    color: #c44569;
-    background-color: white;
-    font-size: 23px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
+.content {
+    width: 300px;
 }
-
-.add-btn:hover {
-    color: white;
-    background-color: #cf6a87;
-    cursor: pointer;
-    border: white solid 1px;
-}
-

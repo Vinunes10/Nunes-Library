@@ -5,5 +5,5 @@ if (!isset($_SESSION)) {
 }
 
 if (!isset($_SESSION["id"])) {
-    header("Location: pag-login.php");
+    header("Location: index.php");
 }

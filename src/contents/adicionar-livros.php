@@ -10,6 +10,9 @@ if(isset($_POST["adicionar"])) {
     $edicao = $_POST["edicao"];
     $editora = $_POST["editora"];
     $public = $_POST["ano-de-publicacao"];
+    // $file = $_FILES[""];
+
+    // var_dump($_FILES); die;
     
     $pdo = Conexao::Conectar("conf.ini");
             
@@ -25,15 +28,14 @@ if(isset($_POST["adicionar"])) {
         ":public" => $public
     ]);
 
-    $idLivro = $pdo->lastInsertId();
-    $idUsuario = $_SESSION['id_usuario'];
+    // $idLivro = $pdo->lastInsertId();
+    // $idUsuario = $_SESSION['id_usuario'];
 
-    $sql = "INSERT INTO relacao_livro_usuario(id_livro, id_usuario) VALUES(:idLivro, :idUsuario)";
-    $stmt = $pdo->prepare($sql);
+    // $sql = "INSERT INTO relacao_livro_usuario(id_livro, id_usuario) VALUES(:idLivro, :idUsuario)";
+    // $stmt = $pdo->prepare($sql);
     
-    $
-    $qtdLinhas = $stmt->execute([
-        ":idLivro" => $idLivro,
-        ":idUsuario" => $idUsuario
-    ]);
+    // $qtdLinhas = $stmt->execute([
+    //     ":idLivro" => $idLivro,
+    //     ":idUsuario" => $idUsuario
+    // ]);
 }
