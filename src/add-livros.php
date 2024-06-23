@@ -21,9 +21,12 @@ include_once "contents/adicionar-livros.php";
     <div class="conteiner">
         <header>
 
-            <h1>Nunes Library</h1>
+            <?php
+                echo "<h1>Biblioteca de {$_SESSION['nome']}</h1>";
+            ?>
 
             <nav class="navbar">
+                <a href="add-livros.php">Adicionar</a>
                 <a href="contents/logout.php">Deslogar</a>
                 <a href="painel.php">Voltar</a>
                 <a href="src/pag-cadastro.php">Contato</a>
@@ -38,22 +41,19 @@ include_once "contents/adicionar-livros.php";
         </header>
         <main>
             <div class="add-books">
-            <h1>Adicionar Livro</h1>
-                <form action="" method="post">
-                    <input type="text" class="field" name="autor" placeholder="Autor" required>
-                    <input type="text" class="field" name="titulo" placeholder="Título" required>
-                    <input type="text" class="field" name="subtitulo" placeholder="Subtítulo" required>
-                    <input type="text" class="field" name="edicao" placeholder="Edição" required>
-                    <input type="text" class="field" name="editora" placeholder="Editora" required>
-                    <input type="date" class="field" name="ano-de-publicacao" placeholder="Ano de Publicação" required>
-                    <input type="file" class="field" name="file" required>
-                    <input type="submit" class="custom-btn" name="adicionar" value="Adicionar">
+                <h1>Adicionar</h1>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <input type="text" class="field" name="autor" placeholder="Autor">
+                    <input type="text" class="field" name="titulo" placeholder="Título">
+                    <input type="text" class="field" name="subtitulo" placeholder="Subtítulo">
+                    <input type="text" class="field" name="edicao" placeholder="Edição">
+                    <input type="text" class="field" name="editora" placeholder="Editora">
+                    <input type="text" class="field" name="ano-de-publicacao" placeholder="Ano de Publicação">
+                    <input type="file" name="file" placeholder="Capa do Livro">
+                    <input type="submit" class="custom-btn" name="adicionar" value="Editar">
                 </form>
             </div>
         </main>
-        <footer>
-
-        </footer>
     </div>
 </body>
 </html>

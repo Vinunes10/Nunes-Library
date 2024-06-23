@@ -12,8 +12,9 @@ body {
 }
 
 .conteiner {
+    background:linear-gradient(360deg, rgba(248, 165, 194, 0.9), rgba(99, 205, 218, 0.9));
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
 }
 
 header {
@@ -61,35 +62,32 @@ header {
 }
 
 main {
-    width: 100vw;
-    height: inherit;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add-books {
-    height: 75vh;
-    width: 22vw;
-    background-color: rgba(207, 106, 135, 0.9);
-    border-radius: 10px;
-    position: absolute;
-    bottom: 10%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-main h1 {
+.add-books {
+    width: 530px;
+    height: 650px;
+    background-color: #c0427d;
+    box-shadow: 3px 3px 4px 2px rgb(0, 0, 0, 0.3);
     color: white;
-    font-size: 44px;
-    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.add-books h2 {
+    font-size: 4em;
 }
 
 form {
-    height: 60vh;
-    width: 22vw;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -105,13 +103,11 @@ form {
 }
 
 .field:focus {
-    outline: #c44569 solid 5px;
+    outline: #9f2960 solid 5px;
     border: none;
 }
 
 .custom-btn {
-    background-color: white;
-    color: #c44569;
     font-size: 1.6rem;
     width: 150px;
     height: 50px;
@@ -120,8 +116,7 @@ form {
 }
 
 .custom-btn:hover  {
+    background-color: rgb(111, 30, 81);
     color: white;
-    background-color: #d66786;
     cursor: pointer;
-    border: white solid 1px;
 }

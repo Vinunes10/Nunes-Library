@@ -67,8 +67,8 @@ header {
 }
 
 .book {
-    width: 400px;
-    height: 600px;
+    width: 430px;
+    height: 650px;
     background-color: #c0427d;
     border-radius: 10px;
     box-shadow: 3px 3px 4px 2px rgb(0, 0, 0, 0.3);
@@ -82,4 +82,28 @@ header {
 
 .content {
     width: 300px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#edit-btn {
+    width: 34px;
+    height: 32px;
+    padding: 4 8;
+    color: white;
+    background-color: #1B9CFC;
+    border-radius: 5px;    
+}
+
+#delete-btn {
+    width: 34px;
+    height: 32px;
+    padding: 4 8;
+    color: white;
+    background-color: #FD7272;
+    border-radius: 5px;    
 }

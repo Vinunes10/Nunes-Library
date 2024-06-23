@@ -10,13 +10,17 @@ if(isset($_POST["adicionar"])) {
     $edicao = $_POST["edicao"];
     $editora = $_POST["editora"];
     $public = $_POST["ano-de-publicacao"];
-    // $file = $_FILES[""];
+    $file = $_FILES["file"];
 
-    // var_dump($_FILES); die;
+    $pasta = "assets/db_imgs";
+    $nome_arquivo = uniqid();
+    $extensao = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    $caminho = $pasta . "/" . $nome_arquivo . "." . $extensao;
+    $registro = move_uploaded_file($file['tmp_name'], $pasta . "/" . $nome_arquivo . "." . $extensao);
     
     $pdo = Conexao::Conectar("conf.ini");
             
-    $sql = "INSERT INTO livros(autor, titulo, subtitulo, edicao, editora, ano_de_publicacao) VALUES(:autor, :titulo, :subtitulo, :edicao, :editora, :public)";
+    $sql = "INSERT INTO livros(autor, titulo, subtitulo, edicao, editora, ano_de_publicacao, capa, user_id) VALUES(:autor, :titulo, :subtitulo, :edicao, :editora, :public, :capa, :user_id)";
     $stmt = $pdo->prepare($sql);
     
     $qtdLinhas = $stmt->execute([
@@ -25,7 +29,9 @@ if(isset($_POST["adicionar"])) {
         ":subtitulo" => $subtitulo,
         ":edicao" => $edicao,
         ":editora" => $editora,
-        ":public" => $public
+        ":public" => $public,
+        ":capa" => $caminho,
+        ":user_id" => $_SESSION['id']
     ]);
 
     // $idLivro = $pdo->lastInsertId();
